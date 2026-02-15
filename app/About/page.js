@@ -1,13 +1,22 @@
+'use client'
+
 import React from 'react'
-import { FaHtml5, FaCss3, FaNodeJs, FaJava, FaReact, FaBootstrap, FaPython, FaGithub, FaDiagramProject } from 'react-icons/fa6';
+import { FaHtml5, FaCss3, FaNodeJs, FaJava, FaReact, FaBootstrap, FaPython, FaGithub, FaDiagramProject, FaDartLang, FaFlutter } from 'react-icons/fa6';
 import Styles from './style.module.css'
 import TextPressure from './TextPressure';
 import Magnet from './Magnet'
+import { SiMongodb } from "react-icons/si";
+import SpotlightCard from './SpotlightCard';
+import BlurText from "./BlurText";
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
 
 const page = () => {
     return (
         <div className={Styles.Skill}>
-            <div style={{ position: 'relative', height: '300px ', width: '900px', paddingLeft: '650px', paddingTop: '100px' }}>
+            <div className="relative md:h-[200px] md:w-[900px] md:pl-[650px] h-[100px] w-[350px] pt-[40px] pl-[120px] ">
                 <TextPressure
                     text="Skills! "
                     flex={true}
@@ -22,13 +31,18 @@ const page = () => {
                 />
             </div>
 
-
             <div className={Styles.H1Container}>
                 <div className={Styles.Content}>
-                    I'm a senior-year student at SEU in Jeddah with a strong passion for learning and exploring technologies.
-                    My expertise includes Software Develpment, Data Analsis, And Information Security.
-                    and I'm always open to learn new tools and technologies.
-                </div>
+                    <BlurText
+      text="I'm a senior-year student at SEU in Jeddah with a strong passion for learning and exploring technologies. 
+      My expertise includes Software Development, Data Analysis, And Information Security. 
+      I'm always open to learn new tools and technologies."
+      delay={150}
+      animateBy="words"
+      direction="top"
+      className="mb-4"
+    />
+                
             </div>
 
 
@@ -104,9 +118,48 @@ const page = () => {
 
 
             </div>
-            <Magnet padding={70} disabled={false} magnetStrength={20}>
-                <button className='font-sans font-light ml-263 mt-7 p-4 border-2 rounded-3xl'> And more Technical skills! </button>
-            </Magnet>
+
+            <SpotlightCard className="w-full max-w-3xl mx-auto mt-10 box-content content-center text-center
+             h-auto text-white transition-all duration-500 rounded-3xl p-6 
+    px-6         /* mobile padding (larger edge padding) */
+    py-6
+    sm:px-8      /* tablet padding */
+    sm:py-8
+    md:px-10     /* desktop padding */
+    md:py-10
+             custom-spotlight-card"
+                 style={{
+    padding: 'clamp(2rem, 8vw, 2.5rem) clamp(1.5rem, 10vw, 3rem)'
+  }}
+                 >
+
+  {/* Text Above */}
+  <h1 className="text-white text-lg sm:text-xl md:text-2xl mb-2">
+  Resume / CV
+  </h1>
+  <p className="text-white/40 text-sm sm:text-base md:text-lg mb-4">
+    Download my professional resume
+  </p>
+
+  {/* Button */}
+  <div className="flex justify-center overflow-hidden">
+    <Magnet padding={20} disabled={false} magnetStrength={20}>
+      <div className={Styles.ButtonWrapper}>
+        <a href="/resume.pdf" download className={Styles.MoreButton}>
+          Download
+        </a>
+      </div>
+    </Magnet>
+  </div>
+
+</SpotlightCard>
+
+
+
+
+            </div>
+           
+            
         </div>
     )
 }
