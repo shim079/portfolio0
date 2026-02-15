@@ -6,11 +6,12 @@
 
 
 :root {
-  
+  scroll-behavior: smooth;
   background-color: black;
 color: white;
 font-family: var(--font-robot), monospace;
- 
+ overflow-x: hidden;
+  max-width: 100%;
 
 }
 
