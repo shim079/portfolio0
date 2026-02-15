@@ -106,75 +106,67 @@ const Page = () => {
 
 
       {/* Contact Form */}
+      <div className="flex flex-col lg:flex-row gap-10">
+        <form ref={form} onSubmit={sendEmail} className={styles.form}>
+          <div className="pl-15 pr-8 flex flex-col gap-2">
+            <label htmlFor='fullname'>Your Name</label>
+            <input
+              name="fullname"
+              className='w-full h-11 px-4 py-2 rounded-2xl border border-slate-50'
+              type='text'
+              id='fullname'
+              placeholder='Name'
+            />
+          </div>
 
-      <form ref={form} onSubmit={sendEmail} className={styles.form}>
-        <div className='pl-15 pr-150 flex flex-col gap-2'>
-          <label htmlFor='fullname'>Your Name</label>
-          <input
+          <div className="pl-15 pr-8 flex flex-col gap-2">
+            <label htmlFor='email'>Your Email</label>
+            <input
+              name="email"
+              className='w-full h-11 px-4 py-2 rounded-2xl border border-slate-50'
+              type='email'
+              id='email'
+              placeholder='Email'
+            />
+          </div>
 
-            name="fullname"
-            className='w-150 h-10 px-6 py-2 rounded-2xl border border-slate-50'
-            type='text'
-            id='fullname'
-            placeholder='Name'
-          />
+          <div className="pl-15 pr-8 flex flex-col gap-2">
+            <label htmlFor='message'>Your Message</label>
+            <textarea
+              name="message"
+              className='px-4 py-2 border border-slate-50 h-48 w-full rounded-2xl shadow-md'
+              id='message'
+              placeholder='Type Your Message Here'
+            />
+          </div>
+
+          <Magnet padding={70} disabled={false} magnetStrength={20}>
+            <button className='mt-3 p-3 ml-25 text-white font-bold border-1 w-29 h-12 md:w-36 rounded-2xl cursor-pointer' type='submit'>
+              Send
+            </button>
+          </Magnet>
+        </form>
+
+        {/* Contact Info */}
+        <div className="pr-20 pl-10 flex-1 text-white space-y-6">
+          <p>
+            I can listen and work with you whether you’re seeking a partner to help develop your brand,
+            explore new ideas, or just need someone to bounce ideas off of.
+          </p>
+          <h2 className='pt-4'>You can find me on:</h2>
+
+          <ul className='p-5 bg-[#FF00B61A] rounded-lg space-y-2'>
+            <li><strong>Email:</strong> Sh.s.alsuraihi@gmail.com</li>
+            <li><strong>Phone:</strong> 966563772833</li>
+          </ul>
+
+          <div className='flex items-center gap-4 p-5 bg-[#FF00B61A] rounded-lg'>
+            <span>Social media:</span>
+            <a href='https://www.linkedin.com/in/shaima-alharbi-7201b822a/'><FaLinkedinIn size={24} /></a>
+            <a href='/'><FaTwitter size={24} /></a>
+            <a href='https://www.behance.net/shaimas4'><FaBehance size={24} /></a>
+          </div>
         </div>
-
-        <div className='pl-15 pr-150 flex flex-col gap-2'>
-          <label htmlFor='email'>Your Email</label>
-          <input
-
-            name="email"
-            className='w-150 h-10 px-6 py-2 rounded-2xl border border-slate-50'
-            type='email'
-            id='email'
-            placeholder='Email'
-          />
-        </div>
-
-        <div className='pl-15 pr-150 flex flex-col gap-2'>
-          <label htmlFor='message'>Your Message</label>
-          <textarea
-
-            name="message"
-            className='shadow-md px-6 py-2 border border-slate-50 h-60 w-150 rounded-2xl'
-            id='message'
-            placeholder='Type Your Message Here'
-          />
-        </div>
-
-        <Magnet padding={70} disabled={false} magnetStrength={20}>
-          <button className='mt-3 p-3 ml-75 text-white font-bold border-1 w-29 h-12 rounded-2xl cursor-pointer' type='submit'>
-            Send
-          </button>
-        </Magnet>
-      </form>
-
-      {/* Contact Info */}
-      <div className='right-10 p-20 absolute top-98 max-w-180'>
-        <h3>
-          I can listen and work with you whether you’re seeking a partner to help develop your brand,
-          explore new ideas, or just need someone to bounce ideas off of.
-        </h3>
-        <h2 className='pt-10 ml-10'>You can find me on:</h2>
-
-        <ul className='p-5 bg-[#FF00B61A] m-4 ml-10 w-80 rounded-[10px]'>
-          <li>Email</li>
-          <li>Sh.s.alsuraihi@gmail.com</li>
-        </ul>
-
-        <ul className='p-5 bg-[#FF00B61A] m-4 ml-10 w-80 rounded-[10px]'>
-          <li>Phone</li>
-          <li>966563772833</li>
-        </ul>
-
-        <ul className='p-5 bg-[#FF00B61A] ml-10 w-80 rounded-[10px] flex items-center space-x-9 absolute'>
-          <p>Social media</p>
-          <a href='https://www.linkedin.com/in/shaima-alharbi-7201b822a/'><FaLinkedinIn /></a>
-          <a href='/'><FaTwitter /></a>
-          <a href='https://www.behance.net/shaimas4'><FaBehance /></a>
-        </ul>
-
       </div>
     </div>
   );
