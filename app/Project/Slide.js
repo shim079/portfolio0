@@ -4,7 +4,7 @@ import { useIsPresent } from 'framer-motion'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 
 const images = [
@@ -14,10 +14,39 @@ const images = [
   '/imgg3.png'
 
 ]
-
+const slides = [
+  {
+    
+    caption: "FamFlix",
+    description: "web-based entertainment platform designed to mimic a family-friendly streaming service. Built using modern web development tools, it features a clean user interface, category-based browsing, and responsive design optimized for all devices."
+  },
+  {
+    
+    caption: "Features",
+    description: "Here we show our main features."
+  },
+  {
+    
+    caption: "Virtual Lightsaber Customization System",
+    description: "This project is a 3D interactive virtual lightsaber customization application that allows users to design and personalize their own futuristic energy sword in a digital environment."
+  },
+  {
+    caption: "Contact Us",
+    description: "Get in touch with our team."
+  }
+];
 
 export default function Slide() {
   const [index, setIndex] = useState(0)
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setIndex((prev) => (prev + 1) % slides.length);
+  }, 3000); // 3 seconds
+
+  return () => clearInterval(interval);
+}, []);
+
+
 
   const handlePrev = () => {
     setIndex((prev) => (prev - 1 + images.length) % images.length)
@@ -41,11 +70,18 @@ export default function Slide() {
           >
             <Image
               src={images[index]}
-              alt={`Slide ${index}`}
-              width={400}
+              alt={slides[index].caption}
+              width={600}
               height={200}
               priority
             />
+            <p className={Styles.Caption}>
+      {slides[index].caption}
+    </p>
+
+    <p className={Styles.Description}>
+      {slides[index].description}
+    </p>
           </motion.div>
         </AnimatePresence>
       </div>

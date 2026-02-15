@@ -33,3 +33,10 @@
 .Button:hover {
   transform: scale(1.2);
 }
+
+.Description {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  max-width: 600px;
+}
