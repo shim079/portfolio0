@@ -21,7 +21,7 @@ const Section1 = () => {
 const Section2 = () => {
     return (
         <div className='flex justify-between items-end '>
-            <h1 className='text-[11vw] leading-[0.8] mt-10'>Shaima</h1>
+            <h1 className='text-[11vw] leading-[0.8] mt-10'>Web & App Developer</h1>
             <p>©Sh S</p>
         </div>
     )
