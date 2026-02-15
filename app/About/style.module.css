@@ -98,6 +98,66 @@
 
 .MoreButton {
     
-
+    font-weight: 200;
+    padding: 12px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
+/* Hover effect */
+.MoreButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+}
+
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+    .Content {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .H1Container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .Icon {
+        font-size: 25px;
+        gap: 20px;
+        align-items: center;
+    }
+    .H1Container {
+        padding: 0px 15px;
+    }
+
+    .Content {
+        font-size: 1.1em;
+    }
+}
+@media (max-width: 600px) {
+    .MoreButton {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+@media (max-width: 900px) {
+    .Skill {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .Skill {
+        padding-top: 80px;
+    }
+}
