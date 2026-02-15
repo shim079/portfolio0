@@ -1,22 +1,16 @@
-'use client'
+"use client";
 
-import React from 'react'
-import { FaHtml5, FaCss3, FaNodeJs, FaJava, FaReact, FaBootstrap, FaPython, FaGithub, FaDiagramProject, FaDartLang, FaFlutter } from 'react-icons/fa6';
+import React, { use } from 'react'
+import { FaHtml5, FaCss3, FaNodeJs, FaJava, FaReact, FaBootstrap, FaPython, FaGithub, FaDiagramProject } from 'react-icons/fa6';
 import Styles from './style.module.css'
 import TextPressure from './TextPressure';
 import Magnet from './Magnet'
-import { SiMongodb } from "react-icons/si";
-import SpotlightCard from './SpotlightCard';
 import BlurText from "./BlurText";
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
-
+import SpotlightCard from './SpotlightCard';
 const page = () => {
     return (
         <div className={Styles.Skill}>
-            <div className="relative md:h-[200px] md:w-[900px] md:pl-[650px] h-[100px] w-[350px] pt-[40px] pl-[120px] ">
+            <div className="relative md:h-[200px] md:w-[900px] md:pl-[650px] h-[100px] w-[350px] pt-[40px] pl-[130px] ">
                 <TextPressure
                     text="Skills! "
                     flex={true}
@@ -31,6 +25,8 @@ const page = () => {
                 />
             </div>
 
+
+
             <div className={Styles.H1Container}>
                 <div className={Styles.Content}>
                     <BlurText
@@ -42,8 +38,10 @@ const page = () => {
       direction="top"
       className="mb-4"
     />
-                
-            </div>
+
+    
+                </div>
+            
 
 
             <div className={Styles.Card}>
