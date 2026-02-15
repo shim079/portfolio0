@@ -22,8 +22,8 @@ const slides = [
   },
   {
     
-    caption: "Features",
-    description: "Here we show our main features."
+    caption: "Login Landing Page",
+    description: "This project showcases a responsive Login Page built using modern web development technologies. Designed with a user-friendly interface."
   },
   {
     
@@ -31,8 +31,8 @@ const slides = [
     description: "This project is a 3D interactive virtual lightsaber customization application that allows users to design and personalize their own futuristic energy sword in a digital environment."
   },
   {
-    caption: "Contact Us",
-    description: "Get in touch with our team."
+    caption: "Neon Fury: Enter the Arena",
+    description: "This webpage presents a modern, high-impact landing page for an action-packed combat game. Designed with a sleek dark theme and neon gradient accents, it immediately captures attention and creates an immersive gaming atmosphere."
   }
 ];
 
