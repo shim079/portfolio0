@@ -8,9 +8,11 @@ import { useState } from 'react'
 
 
 const images = [
-  '/img3.png',
-  '/img4.png',
-  '/img2.png'
+  '/imgg.png',
+  '/imgg1.png',
+  '/imgg2.png',
+  '/imgg3.png'
+
 ]
 
 
