@@ -21,33 +21,38 @@ export default function Navbar() {
     }, [lastScrollY]);
 
     return (
-        <div>
-            
-            <SpotlightCard className={`left-0 w-60 h-20 rounded-r-3xl fixed top-0 z-50 flex items-center px-16 backdrop-blur-md bg-[#4e4e5a62] transition-transform duration-350 ${showNavbar ? 'translate-x-0' : '-translate-x-full'
-                }`}>
-                {/* LEFT: Name */}
-                <div className='text-[rgba(255,_0,_182,_0.15)]  text-3xl font-light font-sans'>
-                    SHAIMA
-                </div>
-            </SpotlightCard>
+       <div>
+    {/* LEFT: SHAIMA Logo */}
+    <SpotlightCard
+      className={`left-3 w-[23vw] sm:w-[220px] h-20 rounded-r-3xl fixed top-7 z-50 flex items-center px-6 sm:px-10 md:px-16 backdrop-blur-md bg-[#4e4e5a62] transition-transform duration-300 ease-in-out ${
+        showNavbar ? 'translate-x-0' : '-translate-x-full'
+      }`}
+    >
+      <div className="text-[rgba(255,_0,_182,_0.15)] text-[1rem] sm:text-[1rem] md:text-3xl lg:text-3xl font-light font-sans">
+        SHAIMA
+      </div>
+    </SpotlightCard>
 
-            <SpotlightCard className={`font-light font-sans right-0 w-120 h-20 rounded-l-3xl fixed top-0 z-50 flex items-center px-9 backdrop-blur-md bg-[#4e4e5a62] transition-transform duration-350 ${showNavbar ? 'translate-x-0' : 'translate-x-full'
-                }`}>
-                {/* RIGHT: Nav Links */}
-                <div className='hidden md:flex ml-auto space-x-4 font-sans'>
-                    <a href='/' className='text-white  hover:text-black rounded-lg p-2'>
+    {/* RIGHT: Navigation Links */}
+    <SpotlightCard
+      className={`right-3 w-[65vw] sm:w-[500px] h-20 rounded-l-3xl fixed top-7 z-50 flex items-center px-6 sm:px-6 md:px-9 backdrop-blur-md bg-[#4e4e5a62] transition-transform duration-300 ease-in-out ${
+        showNavbar ? 'translate-x-0' : 'translate-x-full'
+      }`}
+    >
+      <div className=" md:flex ml-auto space-x-1 font-light font-sans text-[0.65rem] sm:text-[1rem] md:text-sm lg:text-base">
+                    <a href='./' className='text-white  hover:text-black rounded-lg p-2'>
                         Home
                     </a>
-                    <Link href='/Services' className='text-white  hover:text-black rounded-lg p-2'>
+                    <Link href='./Services' className='text-white  hover:text-black rounded-lg p-2'>
                         Services
                     </Link>
-                    <a href='/Project' className='text-white  hover:text-black rounded-lg p-2'>
+                    <a href='./Project' className='text-white  hover:text-black rounded-lg p-2'>
                         Projects
                     </a>
-                    <a href='/About' className='text-white  hover:text-black rounded-lg p-2'>
+                    <a href='./About' className='text-white  hover:text-black rounded-lg p-2'>
                         About
                     </a>
-                    <a href='/Contact' className='text-white  hover:text-black rounded-lg p-2'>
+                    <a href='./Contact' className='text-white  hover:text-black rounded-lg p-2'>
                         Contact
                     </a>
                 </div>

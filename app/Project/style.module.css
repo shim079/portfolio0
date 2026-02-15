@@ -3,7 +3,7 @@ background: #FF00B61A;
 background: radial-gradient(circle,rgba(255, 0, 182, 0.15) 2%, rgba(255, 255, 255, 0.01) 37%, rgba(5, 0, 0, 1) 94%);
 padding-bottom: 200px;
 padding-top: 90px;
-
+border-radius: 10%;
 }
 
 .Content{
@@ -85,3 +85,4 @@ padding-top: 90px;
     transition: 0.7s ease;
     
 }
+

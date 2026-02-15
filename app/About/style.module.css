@@ -1,96 +1,164 @@
 .Skill{
 
-    height: 950px;
+    height: 1000px;
     font-family: var(--font-techno), monospace;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    padding-top: 110px;
+    padding-top: 90px;
+    display: flex;
+    position: relative;
 }
 
-.Card{
-width: 40%;
-height: 40%;
-background-color: rgba(0, 0, 0, 0.077);
-box-shadow: 0 5px 25px rgba(1 1 1 /15%);
+.Card {
+    width: 90%;
+    max-width: 700px;
+    background-color: rgba(0, 0, 0, 0.077);
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
     border-radius: 20px;
-margin-left: 850px;
-padding: 10px;
-margin-top: 60px;
-font-family: var(--font-techno), monospace;
-flex-wrap: wrap;
-
-
-}
-
-.Icon{
-    color: rgb(255, 255, 255);
-    padding: 40px;
-    justify-content: center;
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    font-size: 60px;
-    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 60px;
     font-family: var(--font-techno), monospace;
-    flex-wrap: wrap;
-    flex-direction: row;
-    display: flex;
-}
-.Container{
-    align-items: center;
-    justify-content: center;
-   position: relative;
-   font-family: var(--font-techno), monospace;
-   flex-wrap: wrap;
    
 }
-.Icon1{
-    margin: 10px;
-    flex-wrap: wrap;
-    flex-direction: row;
+
+/* Icons Group */
+.Icon {
+    color: #fff;
+    padding: 20px;
     display: flex;
-}
-.H2{
-    font-size: medium;
-    padding-left: 15px;
-    font-family: sans-serif;
-    font-weight: 50;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    font-size: 40px;
+    
     
 }
-.Icon1:hover{
-    transform: scale(1.5);
+
+/* Single Icon */
+.Icon1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
     transition: 0.5s ease;
-   box-shadow: 0 5px 25px rgba(1 1 1 /15%);
-   border-radius: 10px;
-   
+
 }
+
+.Icon1:hover {
+    transform: scale(1.2);
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+}
+
+.H2 {
+    font-size: 0.6em;
+    margin-top: 5px;
+    
+    font-weight: 400;
+    color: #ccc;
+    display: flex;
+}
+
+/* Title */
 .Title {
     display: flex;
     justify-content: center;
     color: #ffffff;
     font-size: 2.2em;
-    font-weight: 400;
-    margin-bottom: 30px;
-    font-family: sans-serif;
-    padding: 90px;
-    font-family: var(--font-techno), monospace;
     font-weight: 200;
+    margin-bottom: 20px;
+    font-family: var(--font-techno), monospace;
 }
-.H1Container{
-    position: absolute;
-    display: flex;
-    padding-right: 700px;
-    padding-left: 60px;
 
-
+.H1Container {
+     display: flex;
+    justify-content: center; /* Push everything to the right */
+    align-items: flex-start;
+    gap: 60px;                 /* Space between text and icons */
+    width: 100%;
+    padding: 30px;        /* adjust how far right */
+     flex-wrap: wrap;
 }
-.Content{
-    margin-right: 40px;
-    margin-top: 90px;
-   position: absolute;
-    font-size: 1.6em;
-    font-family: sans-serif;
+
+.Content {
+     font-size: 1.3em;
     
     color: #c8c8c8;
-    
+    max-width: 650px; 
+    padding-top: 90px;         /* Keeps paragraph readable */
+    text-align: center;  
 }
+
+.ButtonWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* centers the button */
+    margin-top: 20px;
+}
+
+.MoreButton {
+    
+    font-weight: 200;
+    padding: 12px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.MoreButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+}
+
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+    .Content {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .H1Container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .Icon {
+        font-size: 25px;
+        gap: 20px;
+        align-items: center;
+    }
+    .H1Container {
+        padding: 0px 15px;
+    }
+
+    .Content {
+        font-size: 1.1em;
+    }
+}
+@media (max-width: 600px) {
+    .MoreButton {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+@media (max-width: 900px) {
+    .Skill {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .Skill {
+        padding-top: 80px;
+    }
+}
+
