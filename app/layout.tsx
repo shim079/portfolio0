@@ -3,6 +3,7 @@ import { Dancing_Script, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "./Footer/page1"
 import Header from "./Header/page"
+import { Analytics } from '@vercel/analytics/react';
 
 const geistSans = Roboto_Mono({
   variable: "--font-techno",
@@ -33,6 +34,7 @@ export default function RootLayout({
         <Header/>
         {children}
         <Footer/>
+         <Analytics />
       </body>
       
     </html>
